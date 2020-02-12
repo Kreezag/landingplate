@@ -7,7 +7,7 @@
   background-image: url("/../assets/2_Main_screen.jpg");
   background-position: bottom center;
   background-size: 100%;
-  padding: @pad*11.5 0 @pad*40;
+  padding: @pad*11.5 0 (240px - 30px); // TODO: 250px - overlap by disaster block, 20px - fix bg position
   position: relative;
   z-index: 1;
 }
@@ -114,8 +114,20 @@
   font-size: 1.1rem;
 }
 
+.main__apps-wr {
+  position: relative;
+  width: 100%;
+  margin-top: @pad*22;
+  height: 60px;
+}
+
 .main__apps {
-  margin-top: @pad*23;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
 }
 
 .main__app {
@@ -126,11 +138,11 @@
   text-decoration: none;
   margin-right: @pad*7.5;
   border: 2px solid #ffffff;
-  position: relative;
   width: 230px;
   height: 60px;
   box-sizing: border-box;
   background: center center no-repeat #ffffff;
+  z-index: 1000;
 
   &:hover {
     border-color: @primary;
