@@ -1,0 +1,87 @@
+@import "variables";
+
+.plan {
+  background-color: #EBEFEF;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  background-image: url("/../assets/5_Graphic.png");
+  background-position: top center;
+  background-size: 100%;
+  position: relative;
+  z-index: 1;
+  padding: @pad*75 0;
+}
+
+.plan__layout {
+  .layout();
+}
+
+.plan__description {
+  color: @gray;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: @pad*5;
+}
+
+.plan__title {
+  text-align: center;
+  color: @dark;
+  font-size: 50px;
+  line-height: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.plan__benefits {
+  margin-top: @pad*35;
+}
+
+.plan__benefits-list {
+  width: 100%;
+}
+
+.plan__benefits-item {
+  width: 100%;
+  background-color: #fff;
+  border-radius: @pad*2;
+  display: flex;
+  justify-content: space-between;
+  padding: @pad*11 @pad*15;
+  box-sizing: border-box;
+}
+
+.plan__benefits-item--inverse {
+  background-color: @dark;
+}
+
+.plan__benefits-item-img-wr {
+  width: 16.5%;
+  position: relative;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.plan__benefits-item-img {
+  max-width: 100%;
+  position: absolute;
+  transform: translate(@pad*8, -50%);
+}
+
+.plan__benefits-item-content {
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.plan__benefits-item-content-header {
+  color: @dark;
+  font-size: 40px;
+  margin-bottom: @pad*3;
+  font-weight: bold;
+}
+
+.plan__benefits-item-content-text {
+  color: @gray;
+  line-height: 1.5;
+}
