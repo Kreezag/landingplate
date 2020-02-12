@@ -1,7 +1,179 @@
-//@import "variables";
+@import "variables";
+
+.main {
+  background-color: #151C26;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  background-image: url("/../assets/2_Main_screen.jpg");
+  background-position: bottom center;
+  background-size: 100%;
+  padding: @pad*11.5 0 @pad*50;
+}
+
+.main__layout {
+  .layout();
+  position: relative;
+}
+
+.main__header {
+  font-size: 1rem;
+  height: @pad*11.5;
+  max-height: @pad*11.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__header-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.main__logo {
+  float: left;
+}
+
+.main__company {
+  color: @gray;
+  float: left;
+  margin-left: 18px;
+}
+
+.main__menu-wr {
+}
+
+.main__menu {
+  display: flex;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+  align-items: center;
+}
+
+.main__menu-list {
+  justify-content: center;
+}
+
+.main__menu-item {
+  margin: 0 @pad*7;
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+}
+
+.main__menu-item-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main__menu-button {
+  float: left;
+  background: linear-gradient(261.8deg, #07C7CA 1%, #117DBE 99.37%);
+  font-weight: bold;
+  color: #ffffff;
+  padding: @pad*3 0;
+  border-radius: @pad*2;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-left: @pad*12;
+  width: 230px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
 
-html {
-  background: green;
-  border: 20px solid red
+.main__content {
+  max-width: 70%;
+}
+
+.main__content-header {
+  font-size: 68px;
+  margin: @pad*20 0 @pad*10;
+  line-height: 80px;
+}
+
+.main__content-description {
+  color: @gray;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.main__content-info {
+  font-weight: bold;
+  margin-top: @pad*8;
+  color: @primary;
+  font-size: 1.1rem;
+}
+
+.main__apps {
+  margin-top: @pad*23;
+}
+
+.main__app {
+  color: @dark;
+  border-radius: @pad*2;
+  display: inline-block;
+  padding: @pad @pad*5;
+  text-decoration: none;
+  margin-right: @pad*7.5;
+  border: 2px solid #ffffff;
+  position: relative;
+  width: 230px;
+  height: 60px;
+  box-sizing: border-box;
+  background: center center no-repeat #ffffff;
+
+  &:hover {
+    border-color: @primary;
+    background-color: @dark;
+  }
+}
+
+.main__app--google {
+  background-image: url("/../assets/icons/Google_play_icon_big.svg");
+
+  &:hover {
+    background-image: url("/../assets/icons/Google_play_icon_big_inverse.svg");
+  }
+}
+
+.main__app--appstore {
+  background-image: url("/../assets/icons/APP_Store_icon_big.svg");
+
+  &:hover {
+    background-image: url("/../assets/icons/APP_Store_icon_big_inverse.svg");
+  }
+}
+
+.main__app-info {
+  opacity: 0;
+  position: absolute;
+}
+
+.main__app-text {
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.main__app-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.main__example {
+  position: absolute;
+  right: -10%;
+  bottom: 0;
+}
+
+.main__example-img {
+  width: 670px;
+  height: auto;
 }
