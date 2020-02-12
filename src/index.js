@@ -1,2 +1,3 @@
-import './sass/main.scss'
+import './less/main.less'
 
+console.log('TEST!!!')
