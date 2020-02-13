@@ -6,15 +6,14 @@
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-image: url("/../assets/2_Main_screen.jpg");
-  background-position: bottom center;
+  background-position: 100% center;
   background-size: 100%;
   position: relative;
-  display: block;
-  //z-index: 1;
 }
 
 .contacts__layout {
   .layout();
+  display: flex;
 }
 
 .contacts__form {
@@ -25,7 +24,6 @@
 
 .contacts__form-in {
   max-width: 450px;
-  height: 300px;
   width: 100%;
 }
 
@@ -60,14 +58,14 @@
   margin-bottom: 0;
 }
 
-.contacts__form-submit-wr {
+.contacts__form-button-wr {
   width: 100%;
   display: inline-block;
   text-align: center;
   margin-top: @pad*3.5;
 }
 
-.contacts__form-submit {
+.contacts__form-button {
   background: linear-gradient(261.8deg, #07C7CA 1%, #117DBE 99.37%);
   font-weight: bold;
   color: #ffffff;
@@ -76,7 +74,8 @@
   border: 0;
   text-transform: uppercase;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
   display: inline-block;
   width: 230px;
   text-align: center;
