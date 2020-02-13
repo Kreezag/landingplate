@@ -48,14 +48,16 @@
 }
 
 .main__menu {
-  display: flex;
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 0.6px;
-  align-items: center;
+  display: flex;
+  float: left;
+  height: 100%;
 }
 
 .main__menu-list {
+  display: flex;
   justify-content: center;
   margin-right: @pad*12;
 }
@@ -79,6 +81,7 @@
 }
 
 .main__menu-button {
+  display: block;
   float: left;
   background: linear-gradient(261.8deg, #07C7CA 1%, #117DBE 99.37%);
   font-weight: bold;
