@@ -26,7 +26,7 @@
 .plan__title {
   text-align: center;
   color: @dark;
-  font-size: 50px;
+  font-size: 2.8rem;
   line-height: 60px;
   max-width: 800px;
   margin: 0 auto;
@@ -50,6 +50,7 @@
   padding: @pad*12 @pad*15;
   box-sizing: border-box;
   margin-bottom: @pad*25;
+  min-height: 340px;
 }
 
 .plan__benefits-item--inverse {
@@ -61,6 +62,13 @@
   position: relative;
   align-self: center;
   box-sizing: border-box;
+  margin-right: 13%;
+  margin-left: 0;
+
+  .plan__benefits-item--inverse & {
+    margin-left: 13%;
+    margin-right: 0;
+  }
 }
 
 .plan__benefits-item-img {
@@ -74,23 +82,15 @@
 }
 
 .plan__benefits-item-content {
-  width: 75%;
+  width: 70.5%;
   box-sizing: border-box;
   padding-bottom: @pad*4;
-  padding-left: @pad*10;
-  margin-left: 8.5%;
-  margin-right: 0;
-
-  .plan__benefits-item--inverse & {
-    margin-right: 8.5%;
-    margin-left: 0;
-  }
 }
 
 .plan__benefits-item-content-header {
   color: @dark;
-  font-size: 38px;
-  margin-bottom: @pad*3;
+  font-size: 2.1rem;
+  margin-bottom: @pad*3.5;
   font-weight: bold;
 
   .plan__benefits-item--inverse & {
