@@ -204,7 +204,30 @@
   <div class="contacts__layout">
     <div class="contacts__form">
       <form class="contacts__form-in" action="">
-        Form
+        <div class="contacts__form-control contacts__form-control--name">
+          <label class="contacts__form-control-label">
+            <input class="contacts__form-control-input" type="text" name="name" required placeholder="Name *">
+          </label>
+        </div>
+
+        <div class="contacts__form-control contacts__form-control--email">
+          <label class="contacts__form-control-label">
+            <input class="contacts__form-control-input" type="email" name="email" required placeholder="Email *">
+          </label>
+        </div>
+
+        <div class="contacts__form-control contacts__form-control--message">
+          <label class="contacts__form-control-label">
+            <textarea rows="3" class="contacts__form-control-area" name="message" required placeholder="How would you like to use Decovery? *"></textarea>
+          </label>
+        </div>
+
+        <div class="contacts__form-submit-wr">
+          <button class="contacts__form-submit">
+            get a demo
+          </button>
+        </div>
+
       </form>
     </div>
     <div class="contacts__info">

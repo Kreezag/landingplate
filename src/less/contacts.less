@@ -25,8 +25,62 @@
 
 .contacts__form-in {
   max-width: 450px;
-  border: 1px solid red;
   height: 300px;
+  width: 100%;
+}
+
+.contacts__form-control-label {
+
+}
+
+.contacts__form-control-input,
+.contacts__form-control-area {
+  width: 100%;
+  padding: @pad*2.5 @pad*4;
+  border-radius: @pad*2;
+  border: 2px solid @primary;
+  margin-bottom: @pad*3.5 - 1px; //TODO: 1px design hardcode
+  height: 46px;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: @dark;
+    font-size: 0.95rem;
+    font-family: 'Titillium Web', 'monospace', 'sans-serif';
+    vertical-align: bottom;
+    letter-spacing: 0.5px;
+  }
+}
+
+.contacts__form-control-area {
+  height: auto;
+  padding: @pad*3.5 @pad*4;
+  margin-bottom: 0;
+}
+
+.contacts__form-submit-wr {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: @pad*3.5;
+}
+
+.contacts__form-submit {
+  background: linear-gradient(261.8deg, #07C7CA 1%, #117DBE 99.37%);
+  font-weight: bold;
+  color: #ffffff;
+  padding: @pad*3 @pad*5;
+  border-radius: @pad*2;
+  border: 0;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 1rem;
+  display: inline-block;
+  width: 230px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .contacts__info {
@@ -45,6 +99,5 @@
 .contacts__info-description {
   color: @gray;
   margin-top: @pad*7;
-  //font-size: 0.9rem;
   line-height: 1.5;
 }
