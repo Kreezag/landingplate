@@ -1,0 +1,50 @@
+@import "variables";
+
+.contacts {
+  padding: 150px 0;
+  background-color: #151C26;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  background-image: url("/../assets/2_Main_screen.jpg");
+  background-position: bottom center;
+  background-size: 100%;
+  position: relative;
+  display: block;
+  //z-index: 1;
+}
+
+.contacts__layout {
+  .layout();
+}
+
+.contacts__form {
+  width: 45%;
+  display: inline-block;
+  float: left;
+}
+
+.contacts__form-in {
+  max-width: 450px;
+  border: 1px solid red;
+  height: 300px;
+}
+
+.contacts__info {
+  width: 49%;
+  display: inline-block;
+  margin-left: 6%;
+}
+
+.contacts__info-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: -@pad*4;
+}
+
+.contacts__info-description {
+  color: @gray;
+  margin-top: @pad*7;
+  //font-size: 0.9rem;
+  line-height: 1.5;
+}
