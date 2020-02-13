@@ -1,0 +1,76 @@
+@import "variables";
+
+.footer {
+  background-color: @dark;
+  padding: @pad*7.5;
+}
+
+.footer__layout {
+  .layout();
+  height: @pad*10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: @gray;
+  font-size: 0.75rem;
+}
+
+.footer__copy {
+  margin-right: @pad*9;
+  text-transform: uppercase;
+}
+
+.footer__buttons {
+}
+
+.footer__button {
+  color: @dark;
+  border-radius: @pad*2;
+  display: inline-block;
+  padding: @pad @pad*2;
+  text-decoration: none;
+  margin: 0 @pad*3;
+  border: 2px solid #ffffff;
+  width: 154px;
+  height: 40px;
+  box-sizing: border-box;
+  background: center center no-repeat #ffffff;
+  z-index: 1000;
+
+  &:hover {
+    border-color: @primary;
+    background-color: @dark;
+  }
+}
+
+
+.footer__button--android {
+  background-image: url("/../assets/icons/Google_play_icon_small.svg");
+
+  &:hover {
+    background-image: url("/../assets/icons/Google_play_icon_small_inverse.svg");
+  }
+}
+
+.footer__button--ios {
+  background-image: url("/../assets/icons/APP_Store_icon_small.svg");
+
+  &:hover {
+    background-image: url("/../assets/icons/APP_Store_icon_small_inverse.svg");
+  }
+}
+
+.footer__gdpr {
+  text-transform: uppercase;
+}
+
+.footer__gdpr-item {
+  margin-left: @pad*12;
+  color: @gray;
+  text-decoration: none;
+}
+
+.footer__button-info {
+  position: relative;
+  visibility: hidden;
+}
