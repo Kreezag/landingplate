@@ -1,0 +1,91 @@
+@import "variables";
+
+.quote {
+  background-color: #EBEFEF;
+  padding-top: @pad*20;
+}
+
+.quote__bg {
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  background-image: url("/../assets/6_Background for quote.png");
+  background-position: top center;
+  background-size: auto;
+}
+
+.quote__layout {
+  .layout();
+  position: relative;
+  z-index: 1;
+  padding-bottom: @pad*20;
+}
+
+.quote__main {
+  width: 45%;
+  display: inline-block;
+  margin-top: 10%;
+  box-sizing: border-box;
+}
+
+.quote__main-quote {
+  margin-top: @pad*25;
+  line-height: 1.6;
+  position: relative;
+  font-style: italic;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 10px;
+    font-size: 2.2rem;
+    color: @primary;
+    line-height: 1.2;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &:after {
+    position: relative;
+    display: inline-block;
+    top: 20px;
+    left: 10px;
+    width: 10px;
+    font-size: 2.2rem;
+    color: @primary;
+    line-height: 0;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.quote__main-text {
+  margin-top: @pad*6;
+}
+
+.quote__main-text-name {
+  font-size: 1.55rem;
+  font-weight: bold;
+}
+
+.quote__main-text-info {
+  text-transform: uppercase;
+}
+
+.quote__img-wr {
+  width: 55%; //TODO:
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 120%;
+  position: absolute;
+  left: 52%;
+  top: -20%;
+}
+
+.quote__img {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  max-height: 600px;
+}
