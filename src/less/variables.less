@@ -4,15 +4,23 @@
 @gray: #7B8B9A;
 @dark: #171E28;
 
-@mobile-min: 320px;
-@tablet-min: 600px;
 @desktop-min: 800px;
+
+@tablet-max: @desktop-min - 1px;
+@tablet-min: 600px;
+
+@mobile-max: @tablet-max - 1px;
+@mobile-min: 320px;
 
 .layout {
   max-width: 1210px;
   margin: 0 auto;
   padding: 0 @pad*12.5;
   box-sizing: border-box;
+
+  @media screen and (max-width: @tablet-max) {
+    padding: 0 @pad*3;
+  }
 }
 
 .borderGradientParent {

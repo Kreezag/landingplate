@@ -2,33 +2,47 @@
 
 .footer {
   background-color: @dark;
-  padding: @pad*7.5;
+  padding: @pad*7 0;
+
+  @media screen and (max-width: @tablet-max) {
+    padding-top: @pad*6;
+  }
 }
 
 .footer__layout {
   .layout();
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: @gray;
   font-size: 0.75rem;
+
+  @media screen and (max-width: @tablet-max) {
+    flex-direction: column;
+    font-size: 10px;
+  }
 }
 
 .footer__copy {
-  margin-right: @pad*9;
   text-transform: uppercase;
 }
 
 .footer__buttons {
+  display: flex;
   .borderGradientParent();
+
+  @media screen and (max-width: @tablet-max) {
+    padding: @pad*3 @pad*2;
+  }
 }
 
 .footer__button {
   color: @dark;
   padding: 0 @pad;
-  margin: 0 @pad*3;
+  margin: @pad @pad*3;
   width: 154px;
-  max-height: 40px;
+  height: 40px;
   background: center center no-repeat #ffffff;
   .borderGradient();
 
@@ -39,6 +53,10 @@
   &:hover,
   &:focus {
     background-color: @dark;
+  }
+
+  @media screen and (max-width: @tablet-max) {
+    margin: @pad;
   }
 }
 
@@ -81,12 +99,17 @@
 }
 
 .footer__gdpr-item {
-  margin-left: @pad*12;
+  margin-right: @pad*12;
   color: @gray;
   text-decoration: none;
+  display: inline-block;
 
   &:hover,
   &:active {
     text-decoration: underline;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
