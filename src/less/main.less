@@ -9,6 +9,7 @@
   background-size: 100%;
   padding: @pad*11.5 0 calc(15vw - @pad*6); // NOTE: (x)vw - overlap by disaster block
   position: relative;
+  overflow-x: hidden;
 }
 
 .main__layout {
@@ -66,6 +67,10 @@
   display: flex;
   justify-content: center;
   margin-right: @pad*12;
+
+  @media (min-width: @mobile-min) {
+    display: none;
+  }
 }
 
 .main__menu-item {
