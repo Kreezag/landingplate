@@ -1,7 +1,7 @@
 @import "variables";
 
 .contacts {
-  padding: 150px 0;
+  padding: @pad*37.5 0;
   background-color: #151C26;
   background-attachment: inherit;
   background-repeat: no-repeat;
@@ -9,22 +9,42 @@
   background-position: 100% bottom;
   background-size: 100%;
   position: relative;
+
+  @media screen and (max-width: @tablet-max) {
+    padding: @pad*17 0;
+  }
 }
 
 .contacts__layout {
   .layout();
   display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: @tablet-max) {
+    flex-direction: column-reverse;
+  }
 }
 
 .contacts__form {
   width: 45%;
   display: inline-block;
   float: left;
+  margin: 0;
+
+  @media screen and (max-width: @tablet-max) {
+    float: none;
+    width: 100%;
+    margin-top: @pad*15;
+  }
 }
 
 .contacts__form-in {
   max-width: 450px;
   width: 100%;
+
+  @media screen and (max-width: @tablet-max) {
+    margin: 0 auto;
+  }
 }
 
 .contacts__form-control {
@@ -41,8 +61,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 .contacts__form-control-input,
 .contacts__form-control-area {
@@ -71,7 +89,6 @@
 }
 
 .contacts__form-control-area {
-  //padding: @pad*3.5 @pad*4;
   margin-bottom: 0;
   resize: vertical;
   height: auto;
@@ -93,8 +110,8 @@
   border: 0;
   text-transform: uppercase;
   margin: 0 auto;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.7;
   display: inline-block;
   max-width: 230px;
   width: 100%;
@@ -110,18 +127,38 @@
 .contacts__info {
   width: 49%;
   display: inline-block;
-  margin-left: 6%;
+  margin-left: 7%;
+  margin-top: -@pad*3;
+
+  @media screen and (max-width: @tablet-max) {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.contacts__info-in {
+  width: 100%;
+
+  @media screen and (max-width: @tablet-max) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__info-title {
   font-size: 2.7rem;
   font-weight: bold;
   line-height: 1.25;
-  margin-top: -@pad*4;
 }
 
 .contacts__info-description {
   color: @gray;
   margin-top: @pad*7;
   line-height: 1.5;
+  font-size: 1rem;
+
+  @media screen and (max-width: @tablet-max) {
+    line-height: 1.8;
+  }
 }
