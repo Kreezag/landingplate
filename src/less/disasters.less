@@ -1,12 +1,6 @@
 @import "variables";
 
 .disasters {
-  background-color: transparent;
-  background-attachment: inherit;
-  background-repeat: no-repeat;
-  background-image: url("/../assets/4_Photo.png");
-  background-position: center center; // NOTE: (x)vw - for disaster block
-  background-size: 100% 100%;
   height: calc(60vw);
   max-height: 1100px;
   margin-top: -15vw;
@@ -18,8 +12,24 @@
   align-items: center;
 }
 
+.disasters__bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  background-image: url("/../assets/4_Photo.png");
+  background-position: center center; // NOTE: (x)vw - for disaster block
+  background-size: 100% 100%;
+}
+
 .disasters__layout {
   .layout();
+  position: relative;
+  z-index: 1;
 }
 
 .disasters__text {
