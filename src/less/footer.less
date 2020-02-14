@@ -20,28 +20,26 @@
 }
 
 .footer__buttons {
+  .borderGradientParent();
 }
 
 .footer__button {
   color: @dark;
-  border-radius: @pad*2;
-  display: inline-block;
-  padding: @pad @pad*2;
-  text-decoration: none;
+  padding: 0 @pad;
   margin: 0 @pad*3;
-  border: 2px solid #ffffff;
   width: 154px;
-  height: 40px;
-  box-sizing: border-box;
+  max-height: 40px;
   background: center center no-repeat #ffffff;
-  z-index: 1000;
+  .borderGradient();
+
+  &:not(:hover):before {
+    background-image: linear-gradient(0deg, #fff, #fff);
+  }
 
   &:hover {
-    border-color: @primary;
     background-color: @dark;
   }
 }
-
 
 .footer__button--android {
   background-image: url("/../assets/icons/Google_play_icon_small.svg");
@@ -59,6 +57,22 @@
   }
 }
 
+.footer__button-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: center center no-repeat #ffffff;
+}
+
+.footer__button-info {
+  position: relative;
+  visibility: hidden;
+}
+
 .footer__gdpr {
   text-transform: uppercase;
 }
@@ -67,9 +81,4 @@
   margin-left: @pad*12;
   color: @gray;
   text-decoration: none;
-}
-
-.footer__button-info {
-  position: relative;
-  visibility: hidden;
 }

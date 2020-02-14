@@ -11,3 +11,26 @@
   padding: 0 @pad*12.5;
   box-sizing: border-box;
 }
+
+.borderGradientParent {
+  position: relative;
+  z-index: 1;
+}
+
+.borderGradient {
+  position: relative;
+  border-radius: @pad*2;
+  background-clip: padding-box;
+  display: inline-block;
+  border: @pad/2 solid transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -@pad/2;
+    border-radius: inherit;
+    background: linear-gradient(261.8deg, #07C7CA 1%, #117DBE 99.37%);
+  }
+}
