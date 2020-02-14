@@ -11,25 +11,34 @@
 </head>
 
 <body>
-<section class="main">
+<section class="main" id="home">
   <div class="main__layout">
     <header class="main__header">
 
       <div class="main__header-logo">
-        <img src="./assets/1_Decovery%20logo.svg" alt="decovery" class="main__logo">
-        <span class="main__company">by Spiral Scout</span>
+        <a href="./#" class="main__header-logo-img-wr">
+          <img src="./assets/1_Decovery%20logo.svg" alt="decovery" class="main__header-logo-img">
+        </a>
+        <a
+          href="https://spiralscout.com/"
+          rel="nofollow noopenner noreferrer"
+          target="_blank"
+          class="main__header-logo-company"
+        >
+          by Spiral Scout
+        </a>
       </div>
 
       <div class="main__menu-wr">
         <nav class="main__menu">
           <ul class="main__menu-list">
             <li class="main__menu-item">
-              <a class="main__menu-item-link" href="/">home</a>
+              <a class="main__menu-item-link" href="./#home">home</a>
             </li>
             <li class="main__menu-item">
-              <a class="main__menu-item-link" href="/">features</a></li>
+              <a class="main__menu-item-link" href="./#features">features</a></li>
             <li class="main__menu-item">
-              <a class="main__menu-item-link" href="/">contacts</a></li>
+              <a class="main__menu-item-link" href="./#contacts">contacts</a></li>
           </ul>
         </nav>
         <button class="main__menu-button">request a demo</button>
@@ -108,7 +117,7 @@
   <div class="plan__layout">
     <div class="plan__description">Plan better, Move faster and Save money and time.</div>
 
-    <h2 class="plan__title">
+    <h2 class="plan__title" id="features">
       Have a plan in place before a disaster, so it's not
       a complete disaster
     </h2>
@@ -241,7 +250,7 @@
       </form>
     </div>
     <div class="contacts__info">
-      <div class="contacts__info-title">
+      <div class="contacts__info-title" id="contacts">
         Manage your inspectors and buildings
       </div>
       <div class="contacts__info-description">

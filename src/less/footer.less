@@ -36,7 +36,8 @@
     background-image: linear-gradient(0deg, #fff, #fff);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @dark;
   }
 }
@@ -44,7 +45,8 @@
 .footer__button--android {
   background-image: url("/../assets/icons/Google_play_icon_small.svg");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("/../assets/icons/Google_play_icon_small_inverse.svg");
   }
 }
@@ -52,7 +54,8 @@
 .footer__button--ios {
   background-image: url("/../assets/icons/APP_Store_icon_small.svg");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("/../assets/icons/APP_Store_icon_small_inverse.svg");
   }
 }
@@ -81,4 +84,9 @@
   margin-left: @pad*12;
   color: @gray;
   text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
