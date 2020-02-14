@@ -1,24 +1,25 @@
 @import "variables";
 
 .disasters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-image: url("/../assets/4_Photo.png");
-  background-position: center center;
+  background-position: center center; // NOTE: (x)vw - for disaster block
   background-size: 100% 100%;
-  height: 1100px;
-  margin-top: -270px;
-  margin-bottom: -270px;
+  height: calc(60vw);
+  max-height: 1100px;
+  margin-top: -15vw;
+  margin-bottom: -15vw;
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .disasters__layout {
-  .layout()
+  .layout();
 }
 
 .disasters__text {
