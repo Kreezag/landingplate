@@ -60,6 +60,10 @@
   .contacts__form-control--message & {
     margin-bottom: 0;
   }
+
+  .contacts__form-control--message &:before {
+    margin-bottom: 4px;
+  }
 }
 
 .contacts__form-control-input,
@@ -68,7 +72,6 @@
   border-radius: inherit;
   border: none;
   padding: @pad*2.5 @pad*4;
-  //border: 2px solid @primary;
   height: 44px;
   font-size: 0.95rem;
   line-height: 1.2;
