@@ -11,7 +11,7 @@
   position: relative;
 
   @media screen and (max-width: @tablet-max) {
-    padding: @pad*17 0;
+    padding: @pad*16 0 @pad*22;
   }
 }
 
@@ -34,7 +34,7 @@
   @media screen and (max-width: @tablet-max) {
     float: none;
     width: 100%;
-    margin-top: @pad*15;
+    margin-top: @pad*14;
   }
 }
 
@@ -55,7 +55,7 @@
 .contacts__form-control-label {
   .borderGradient();
   width: 100%;
-  margin-bottom: @pad*2.5; //TODO: 1px design hardcode
+  margin-bottom: @pad*2.5;
 
   .contacts__form-control--message & {
     margin-bottom: 0;
@@ -121,6 +121,10 @@
   text-align: center;
   box-sizing: border-box;
 
+  @media screen and (max-width: @tablet-max) {
+    padding: @pad*2 @pad*5;
+  }
+
   &:hover,
   &:focus {
     box-shadow: 4px 4px 14px -4px #07C7CA;
@@ -153,6 +157,12 @@
   font-size: 2.7rem;
   font-weight: bold;
   line-height: 1.25;
+
+  @media screen and (max-width: @tablet-max) {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: @pad*2;
+  }
 }
 
 .contacts__info-description {
@@ -163,5 +173,6 @@
 
   @media screen and (max-width: @tablet-max) {
     line-height: 1.8;
+    margin-top: @pad*10;
   }
 }
