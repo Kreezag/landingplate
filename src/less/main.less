@@ -99,7 +99,7 @@
 .main__menu-list {
   display: flex;
   justify-content: center;
-  margin-right: @pad*12;
+  margin-right: @pad*19;
 }
 
 .main__menu-item {
@@ -107,6 +107,14 @@
   display: inline-flex;
   align-items: center;
   align-self: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .main__menu-item-link {
