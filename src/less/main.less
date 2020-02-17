@@ -1,7 +1,7 @@
 @import "variables";
 
 .main {
-  background-color: @black;
+  background-color: @color-black;
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-image: url("/../assets/2_Main_screen.jpg");
@@ -68,7 +68,7 @@
 }
 
 .main__header-logo-company {
-  color: @gray;
+  color: @color-gray;
   float: left;
   font-size: 18px;
   line-height: 1.2;
@@ -93,7 +93,7 @@
 
   @media screen and (max-width: @tablet-max) {
     .page-mobile-menu-open & {
-      background-color: @black;
+      background-color: @color-black;
       display: flex;
       position: absolute;
       padding: @pad*2;
@@ -170,7 +170,7 @@
 
     .main__mobile-menu & {
       flex-direction: column;
-      background-color: @black;
+      background-color: @color-black;
       padding: @pad*11;
     }
 
@@ -240,7 +240,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: @primary;
+    color: @color-primary;
   }
 
   @media screen and (max-width: @tablet-max) {
@@ -303,7 +303,7 @@
 }
 
 .main__content-description {
-  color: @gray;
+  color: @color-gray;
   width: 70%;
   line-height: 1.6;
 
@@ -316,7 +316,7 @@
 .main__content-info {
   font-weight: bold;
   margin-top: @pad*8;
-  color: @primary;
+  color: @color-primary;
   font-size: 1.1rem;
 
   @media screen and (max-width: @tablet-max) {
@@ -346,7 +346,7 @@
 }
 
 .main__app {
-  color: @dark;
+  color: @color-dark;
   border-radius: @pad*2;
   display: flex;
   padding: @pad @pad*5;
@@ -365,7 +365,7 @@
 
   &:hover,
   &:focus {
-    background-color: @dark;
+    background-color: @color-dark;
   }
 
   @media screen and (max-width: @tablet-max) {
