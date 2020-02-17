@@ -24,6 +24,15 @@ html {
 body {
   padding: 0;
   margin: 0;
+  display: block;
+  position: inherit;
+
+  @media screen and (max-width: @tablet-max) {
+    &.page-mobile-menu-open {
+      overflow: hidden;
+      position: fixed;
+    }
+  }
 }
 
 * {

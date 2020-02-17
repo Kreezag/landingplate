@@ -1,7 +1,7 @@
 @import "variables";
 
 .main {
-  background-color: #151C26;
+  background-color: @black;
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-image: url("/../assets/2_Main_screen.jpg");
@@ -92,20 +92,25 @@
   display: none;
 
   @media screen and (max-width: @tablet-max) {
-    display: flex;
-    position: absolute;
-    padding: @pad*2;
-    right: 0;
-    top: @pad*10;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    z-index: 1000;
+    .page-mobile-menu-open & {
+      background-color: @black;
+      display: flex;
+      position: absolute;
+      padding: @pad*2;
+      right: 0;
+      top: @pad*12;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - @pad * 10);
+      z-index: 1000;
+    }
   }
 }
 
+
 .main__mobile-opener {
   display: none;
+
   @button-height: 20px;
   @line-size: 2px;
 
@@ -114,7 +119,7 @@
     width: 25px;
     height: @button-height;
     position: absolute;
-    right: @pad*2;
+    right: @pad*4;
     top: 0;
     background: transparent;
     cursor: pointer;
@@ -141,7 +146,7 @@
       background-color: #fff;
     }
 
-    &.mobile-menu-opener--open {
+    .page-mobile-menu-open & {
       &:before {
         transform: rotate(-45deg) ;
         top: (@button-height)/2 - (@line-size + 1px);
@@ -162,18 +167,16 @@
 
   @media screen and (max-width: @tablet-max) {
     display: none;
-  }
 
-  .main__mobile-menu & {
-    flex-direction: column;
-    background-color: @dark;
-    padding: @pad*11;
-    //border: 1px solid @primary;
-  }
+    .main__mobile-menu & {
+      flex-direction: column;
+      background-color: @black;
+      padding: @pad*11;
+    }
 
-
-  .mobile-menu-opener--open + .main__mobile-menu & {
-    display: flex;
+    .page-mobile-menu-open .main__mobile-menu & {
+      display: flex;
+    }
   }
 }
 
@@ -183,16 +186,7 @@
   letter-spacing: 0.6px;
   display: flex;
   height: 100%;
-
-  .main__mobile-menu & {
-    //display: none;
-    //width: 40px;
-    //height: 40px;
-  }
 }
-
-
-.main__menu--open {}
 
 .main__menu-list {
   display: flex;
