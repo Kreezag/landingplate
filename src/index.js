@@ -1,3 +1,7 @@
 import './less/index.less'
 
-console.log('TEST!!!');
+const menuOpenerEl = window.document.getElementById('mobile-menu-opener');
+
+menuOpenerEl.onclick = ((e) => {
+  menuOpenerEl.classList.toggle('mobile-menu-opener--open');
+})
