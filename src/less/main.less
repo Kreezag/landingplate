@@ -37,6 +37,10 @@
   justify-content: center;
   align-self: center;
 
+  @media screen and (max-width: @desktop-max) {
+    display: block;
+  }
+
   @media screen and (max-width: @tablet-max) {
     display: block;
   }
@@ -44,9 +48,11 @@
 
 .main__header-logo-img-wr {
   float: left;
+  margin-right: 18px;
 
   @media screen and (max-width: @tablet-max) {
     float: none;
+    margin-right: 0;
   }
 }
 
@@ -61,7 +67,6 @@
 .main__header-logo-company {
   color: @gray;
   float: left;
-  margin-left: 18px;
   font-size: 18px;
   line-height: 1.2;
   display: inline-flex;
@@ -75,13 +80,14 @@
   }
 
   @media screen and (max-width: @tablet-max) {
-    margin-left: 0;
     margin-top: @pad;
     float: none;
   }
 }
 
 .main__menu-wr {
+  display: flex;
+
   @media screen and (max-width: @tablet-max) {
     display: none;
   }
@@ -100,6 +106,10 @@
   display: flex;
   justify-content: center;
   margin-right: @pad*19;
+
+  @media screen and (max-width: @desktop-max) {
+    margin-right: @pad*10;
+  }
 }
 
 .main__menu-item {
@@ -114,6 +124,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media screen and (max-width: @desktop-max) {
+    margin: 0 @pad*4;
   }
 }
 
