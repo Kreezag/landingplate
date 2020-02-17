@@ -3,6 +3,7 @@
 .quote {
   background-color: #EBEFEF;
   padding-top: @pad*20;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -12,6 +13,14 @@
   background-image: url("/../assets/6_Background for quote.png");
   background-position: top center;
   background-size: auto;
+
+  @media screen and (min-width: 2000px) { //NOTE: hardcoded
+    background-size: 100%;
+  }
+
+  @media screen and (max-width: @desktop-min) {
+    background-position: bottom center;
+  }
 }
 
 .quote__layout {
@@ -26,7 +35,7 @@
 }
 
 .quote__main {
-  width: 45%;
+  width: 46.5%;
   display: inline-block;
   margin-top: 10%;
   box-sizing: border-box;
