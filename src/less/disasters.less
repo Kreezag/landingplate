@@ -10,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: @tablet-max) {
+    height: 440px;
+  }
 }
 
 .disasters__bg {
@@ -24,6 +28,10 @@
   background-image: url("/../assets/4_Photo.png");
   background-position: center center; // NOTE: (x)vw - for disaster block
   background-size: 100% 100%;
+
+  @media screen and (max-width: @tablet-max) {
+    background-image: url("/../assets/mobile/2_Photo.png");
+  }
 }
 
 .disasters__layout {
