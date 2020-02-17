@@ -11,8 +11,10 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: @tablet-max) {
+  @media screen and (max-width: @tablet-min) {
     height: 440px;
+    margin-top: -16vw;
+    margin-bottom: -16vw;
   }
 }
 
@@ -29,7 +31,7 @@
   background-position: center center; // NOTE: (x)vw - for disaster block
   background-size: 100% 100%;
 
-  @media screen and (max-width: @tablet-max) {
+  @media screen and (max-width: @tablet-min) {
     background-image: url("/../assets/mobile/2_Photo.png");
   }
 }
