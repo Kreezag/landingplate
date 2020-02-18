@@ -12,6 +12,7 @@
   overflow-x: hidden;
 
   @media screen and (max-width: @tablet-max) {
+    padding-top: @pad*10;
     padding-bottom: 15vw;
     overflow: inherit;
     background-size: 100% 1000px;
@@ -57,6 +58,11 @@
     float: none;
     margin-right: 0;
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 1px @color-primary;
+  }
 }
 
 .main__header-logo-img {
@@ -87,26 +93,6 @@
     float: none;
   }
 }
-
-.main__mobile-menu {
-  display: none;
-
-  @media screen and (max-width: @tablet-max) {
-    .page-mobile-menu-open & {
-      background-color: @color-black;
-      display: flex;
-      position: absolute;
-      padding: @pad*2;
-      right: 0;
-      top: @pad*12;
-      flex-direction: column;
-      width: 100%;
-      height: calc(100vh - @pad * 10);
-      z-index: 1000;
-    }
-  }
-}
-
 
 .main__mobile-opener {
   display: none;
@@ -145,19 +131,13 @@
       bottom: 0;
       background-color: #fff;
     }
+  }
 
-    .page-mobile-menu-open & {
-      &:before {
-        transform: rotate(-45deg) ;
-        top: (@button-height)/2 - (@line-size + 1px);
-        width: 120%;
-      }
-
-      &:after {
-        transform: rotate(45deg) ;
-        bottom: (@button-height)/2 - (@line-size + 1px);
-        width: 120%;
-      }
+  &:hover,
+  &:focus {
+    &:before,
+    &:after {
+      background-color: @color-primary;
     }
   }
 }
@@ -167,16 +147,6 @@
 
   @media screen and (max-width: @tablet-max) {
     display: none;
-
-    .main__mobile-menu & {
-      flex-direction: column;
-      background-color: @color-black;
-      padding: @pad*11;
-    }
-
-    .page-mobile-menu-open .main__mobile-menu & {
-      display: flex;
-    }
   }
 }
 
@@ -195,12 +165,6 @@
 
   @media screen and (max-width: @desktop-max) {
     margin-right: @pad*10;
-  }
-
-  @media screen and (max-width: @tablet-max) {
-    flex-direction: column;
-    margin-right: 0;
-    width: 100%;
   }
 }
 
@@ -221,14 +185,6 @@
   @media screen and (max-width: @desktop-max) {
     margin: 0 @pad*4;
   }
-
-  @media screen and (max-width: @tablet-max) {
-    margin: @pad*5 auto;
-    width: 100%;
-    justify-content: center;
-    align-self: center;
-    font-size: 40px;
-  }
 }
 
 .main__menu-item-link {
@@ -241,10 +197,6 @@
   &:focus {
     text-decoration: none;
     color: @color-primary;
-  }
-
-  @media screen and (max-width: @tablet-max) {
-    font-size: 40px;
   }
 }
 
@@ -269,15 +221,6 @@
   &:hover,
   &:focus {
     box-shadow: 4px 4px 14px -4px #07C7CA;
-  }
-
-  @media screen and (max-width: @tablet-max) {
-    width: auto;
-    font-size: 18px;
-  }
-
-  .main__mobile-menu & {
-    margin-top: @pad*12;
   }
 }
 
